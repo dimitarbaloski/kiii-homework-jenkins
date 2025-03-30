@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("dimitarbaloski/kiii-homework/jenkins")
+       app = docker.build("dimitarbaloski/kiii-homework-jenkins")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
